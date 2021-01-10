@@ -19,7 +19,7 @@ const {
 module.exports = () => {
     var io = require('socket.io')(strapi.server, {
         cors: {
-          origin: process.env.REACT_APP_URL || "http://localhost:3000",
+          origin: process.env.CUSTOM_DOMAIN || process.env.REACT_APP_URL || "http://localhost:3000",
           methods: ["GET", "POST"],
           allowedHeaders: ["my-custom-header"],
           credentials: true
